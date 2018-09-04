@@ -1,6 +1,6 @@
 (async function loadModel() {
     console.log('loading model...');
-    let model = await tf.loadModel('http://localhost:port/saved_model/model.json');
+    let model = await tf.loadModel('http://localhost:port/saved_model/model.json'); //change port here
     console.log('model loaded');
 
     const lastGuess = document.getElementById('lastGuess');
