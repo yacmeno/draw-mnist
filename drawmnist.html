@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.12.5"></script>
+    <style>
+        body {
+            display: grid;
+            grid-template-rows: 1fr;
+            width: 400px;
+            margin: auto;
+            grid-gap: 30px;
+        }
+        #canvas {
+            padding: 0;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            border: 2px solid;
+        }
+
+        .board {
+            display: grid;
+            grid-template-columns: 20% 80%;
+            grid-gap: 2px;
+        }
+
+        .operations {
+            display: grid;
+        }
+
+        .result {
+            margin: auto;
+        }
+
+        .result > div {
+            float: left;
+        }
+
+        #lastGuess {
+            margin-left: 10px;
+        }
+
+    </style>
+    <title>Keras MNIST</title>
+</head>
+<body>
+    <div class="board">
+        <div class="operations">
+            <button id="guess" type="">Guess</button>
+            <button id="clear">Clear</button>
+        </div>
+        <canvas id="canvas" width="256" height="256">
+            <script src="scripts/board.js"></script>
+        </canvas>
+    </div>
+    <script src="scripts/guessing.js"></script>
+    <div class="result">
+        <div>Last number guessed:</div>
+        <div id="lastGuess"></div>
+    </div>
+    <div class="rules">
+        <h2>Usage</h2>
+        <ul>
+            <li>Wait until the model is loaded (check console)</li>
+            <li>Draw single digit numbers</li>
+            <li>Draw a centered + decent-sized number</li>
+        </ul>
+    </div>
+</body>
+</html>
